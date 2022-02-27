@@ -24,15 +24,16 @@ else:
 async def on_connect():
     clear()
     print(f'''
-        \033[38;5;196m\t\t██████╗░░█████╗░██╗░░██╗██╗░░██╗
-        \033[38;5;196m\t\t██╔══██╗██╔══██╗╚██╗██╔╝╚██╗██╔╝
-        \033[38;5;196m\t\t██║░░██║██║░░██║░╚███╔╝░░╚███╔╝░
-        \033[96m\t\t██║░░██║██║░░██║░██╔██╗░░██╔██╗░
-        \033[96m\t\t██████╔╝╚█████╔╝██╔╝╚██╗██╔╝╚██╗ 
-        \033[96m\t\t╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝
+        \t\t\x1b[38;5;203m █████\x1b[0m╗\x1b[38;5;203m ██\x1b[0m╗\x1b[38;5;203m      █████\x1b[0m╗\x1b[38;5;203m  ██████\x1b[0m╗\x1b[38;5;203m██████\x1b[0m╗\x1b[38;5;203m ██\x1b[0m╗\x1b[38;5;203m████████\x1b[0m╗\x1b[38;5;203m████████\x1b[0m╗\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m   ██\x1b[0m╗\x1b[38;5;203m
+\t\t██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m     ██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m██\x1b[0m╔════╝\x1b[38;5;203m██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m██\x1b[0m║╚══\x1b[38;5;203m██\x1b[0m╔══╝╚══\x1b[38;5;203m██\x1b[0m╔══╝╚\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m ██\x1b[0m╔╝\x1b[38;5;203m
+\t\t███████\x1b[0m║\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m     ███████\x1b[0m║\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m     ██████\x1b[0m╔╝\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m   ██\x1b[0m║\x1b[38;5;203m      ██\x1b[0m║\x1b[38;5;203m    \x1b[0m╚\x1b[38;5;203m████\x1b[0m╔╝\x1b[38;5;203m
+\t\t██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m     ██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m     ██\x1b[0m╔══\x1b[38;5;203m██\x1b[0m╗\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m   ██\x1b[0m║\x1b[38;5;203m      ██\x1b[0m║\x1b[38;5;203m     \x1b[0m╚\x1b[38;5;203m██\x1b[0m╔╝\x1b[38;5;203m 
+\t\t██\x1b[0m║  \x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m███████\x1b[0m╗\x1b[38;5;203m██\x1b[0m║  \x1b[38;5;203m██\x1b[0m║╚\x1b[38;5;203m██████\x1b[0m╗\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m  ██\x1b[0m║\x1b[38;5;203m██\x1b[0m║\x1b[38;5;203m   ██\x1b[0m║\x1b[38;5;203m      ██\x1b[0m║\x1b[38;5;203m      ██\x1b[0m║\x1b[38;5;203m   
+\t\t\x1b[0m╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝   \x1b[38;5;203m"""
+
         
         ''')
-    print(f"     \x1b[38;5;196m[DOXXSCRAPER] \x1b[96mTOKEN Authenticated\x1b[38;5;196m ")
+    print(f"     \x1b[38;5;196m[Alacritty] \x1b[96mTOKEN Authenticated\x1b[38;5;196m ")
     try:
         os.remove("data/users.txt")
         os.remove("data/channels.txt")
@@ -40,7 +41,7 @@ async def on_connect():
     except:
         pass
 
-    guild = input(f"     \x1b[38;5;196m[DOXXSCRAPER] \x1b[96mGUILD ID\x1b[38;5;196m ")
+    guild = input(f"     \x1b[38;5;196m[Alacritty] \x1b[96mGUILD ID\x1b[38;5;196m ")
     await client.wait_until_ready()
     guildOBJ = client.get_guild(int(guild))
     members = await guildOBJ.chunk()
@@ -50,7 +51,7 @@ async def on_connect():
     for member in members:
         f.write(f"{member.id}\n")
         members_ += 1
-    print(f"        \x1b[38;5;196m[DOXXSCRAPER] \x1b[96mScraped {members_} Members\x1b[38;5;")
+    print(f"        \x1b[38;5;196m[Alacritty] \x1b[96mScraped {members_} Members\x1b[38;5;")
 
     channels = 0
     f = open("data/channels.txt", "a+")
