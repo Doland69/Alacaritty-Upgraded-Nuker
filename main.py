@@ -302,7 +302,7 @@ if __name__ == "__main__":
         token=input("%s[%s-%s] %sToken%s:%s " % (red, reset, red, reset, red, reset)),
         bot=True,
         guild=input("%s[%s-%s] %sGuild%s:%s " % (red, reset, red, reset, red, reset)),       
-        proxies=False
+        proxies=True
     )
     try:
         loop = asyncio.get_event_loop()
